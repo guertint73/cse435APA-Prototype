@@ -17,6 +17,11 @@ html, body, .container-fluid {
     padding: 25px;
   }
 
+  img{
+    width: 300;
+    height: 300;
+  }
+
   li{
     display: inline-block;
   }
