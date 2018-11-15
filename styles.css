@@ -4,7 +4,7 @@ html, body, .container-fluid {
     color: white;
     align-content: center;
     text-align: center;
-    max-width: 700px;
+    max-width: 900px;
     max-height: 600px;
     margin: auto
   }
@@ -20,6 +20,10 @@ html, body, .container-fluid {
   img{
     width: 300;
     height: 300;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    display: block;
   }
 
   li{
@@ -28,6 +32,7 @@ html, body, .container-fluid {
 
   button {
     white-space: nowrap;
+    align-self: center;
     display: inline-block;
     height: 40px;
     line-height: 40px;
