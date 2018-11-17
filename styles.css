@@ -1,6 +1,6 @@
 html, body, .container-fluid {
     height: 100%;
-    background-color: #111;
+
     color: white;
     align-content: center;
     text-align: center;
@@ -18,8 +18,8 @@ html, body, .container-fluid {
   }
 
   img{
-    width: 300;
-    height: 300;
+    width: 300px;
+    height: 300px;
     align-content: center;
     justify-content: center;
     margin: auto;
@@ -73,3 +73,26 @@ html, body, .container-fluid {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   }
+
+  body {
+    background-color: white;
+  }
+
+  .driver-view {
+    display: inline-block;
+  }
+
+  .container-fluid {
+    border: 1px solid white;
+    margin-top: 10px;
+    background-color: black;
+    float: right;
+    width:60%;
+  }
+
+  .controls {
+    float: left;
+    width: 30%;
+  }
+
+

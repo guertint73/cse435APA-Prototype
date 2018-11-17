@@ -17,26 +17,35 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <h1>Parking Procedure Started</h1>
-    <div style="float:left; display:inline;">
-        <h3 id="speed">Speed: 3 MPH</h3>
+  <div class="driver-view">
+    <div class="controls">
+      <a href="parkingHalted.html"><img src="wheel.jpg" alt="Steering Wheel" id="steeringWheel" height="300" width="300"></a>
+      <a href="parkingHalted.html"><img src="brake.jpg" alt="Brake" id="brake" height="300" width="300"></a>
     </div>
-    <div style="float:right; display:inline;">
-      <h3 id="gear">Current Gear: R</h3>
-    </div>
+    <div class="container-fluid">
+      <h1>Parking Procedure Started</h1>
+      <div style="float:left; display:inline;">
+          <h3 id="speed">Speed: 3 MPH</h3>
+      </div>
+      <div style="float:right; display:inline;">
+        <h3 id="gear">Current Gear: R</h3>
+      </div>
 
-    
-    <img src="ryerson.jpg" alt="office space picture" id="parkingImage" height="400" width="600">
-    <div>
-      <h3> Sensor Position: 0" 1" 0.5" 2"</h3>
+
+      <img src="ryerson.jpg" alt="office space picture" id="parkingImage" height="400" width="600">
+      <div>
+        <h3> Sensor Position: 0" 1" 0.5" 2"</h3>
+      </div>
+
+      <a href="parkingHalted.html"><button id="cancelButton">Cancel Procedure</button></a>
     </div>
-      <ul>
-        <li><a><button id="cancelButton">Cancel Procedure</button></a></li>
-        <li><a href="parkingHalted.html"><button>Push brake</button></a></li>
-        <li><a href="parkingHalted.html"><button>Steer wheel</button></a></li>
-      </ul>
   </div>
+
+  <!--<ul>-->
+    <!---->
+    <!--<li><a href="parkingHalted.html"><button>Push brake</button></a></li>-->
+    <!--<li><a href="parkingHalted.html"><button>Steer wheel</button></a></li>-->
+  <!--</ul>-->
 
   <script src="script.js"></script>
 
