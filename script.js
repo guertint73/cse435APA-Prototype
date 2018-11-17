@@ -12,6 +12,19 @@ loadParallelImage = function(){
     }
 }
 
+listenExitButton = function(){
+    var exitButton = document.getElementById('exitButton');
+    if(exitButton!=null){
+        exitButton.addEventListener('click', window.close())
+    }
+}
+
+listenCancelButton = function(){
+    var cancelButton = document.getElementById('cancelButton')
+    if(cancelButton != null){
+        
+    }
+}
 
 playRearCameraFeed = function(){
 
