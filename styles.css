@@ -1,6 +1,5 @@
 html, body, .container-fluid {
     height: 100%;
-
     color: white;
     align-content: center;
     text-align: center;
@@ -87,12 +86,13 @@ html, body, .container-fluid {
     margin-top: 10px;
     background-color: black;
     float: right;
-    width:60%;
+    widows: 70%;
   }
 
   .controls {
+    background-color: black;
     float: left;
-    width: 30%;
+    width: 20%;
   }
 
 
