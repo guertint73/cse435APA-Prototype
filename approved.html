@@ -13,11 +13,10 @@
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
   <script>
       $(document).ready(function() {
+        new playFeed();
         let timerId = setInterval(() => completed(), 15000);
-
       // after 5 seconds stop
       setTimeout(() => { clearInterval(timerId)}, 15500);
       });
@@ -42,9 +41,9 @@
       <div style="float:right; display:inline;">
         <h3 id="gear">Current Gear: R</h3>
       </div>
-
-
-      <img src="ryerson.jpg" alt="office space picture" id="parkingImage" height="400" width="600">
+      <source src="parallelVideo.mp4" alt="office space picture" id="parkingVideo" height="400" width="600" type="video/mp4" controls>
+        <p>placeholder for video</p>
+      </video>
       <div>
         <h3> Sensor Position: 0" 1" 0.5" 2"</h3>
       </div>
