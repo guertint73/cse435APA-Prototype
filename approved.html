@@ -16,9 +16,9 @@
   <script>
       $(document).ready(function() {
         new playFeed();
-        let timerId = setInterval(() => completed(), 15000);
+        let timerId = setInterval(() => completed(), 16000);
       // after 5 seconds stop
-      setTimeout(() => { clearInterval(timerId)}, 15500);
+      setTimeout(() => { clearInterval(timerId)}, 16500);
       });
       function completed(){
         //alert('Parking Procedure Completed')
@@ -41,8 +41,9 @@
       <div style="float:right; display:inline;">
         <h3 id="gear">Current Gear: R</h3>
       </div>
-      <source src="parallelVideo.mp4" alt="office space picture" id="parkingVideo" height="400" width="600" type="video/mp4" controls>
-        <p>placeholder for video</p>
+      <video controls height="400" width="600" muted>
+        <source src="parallelVideo.mp4" id="parkingVideo" type="video/mp4">
+          <p>placeholder for video</p>
       </video>
       <div>
         <h3> Sensor Position: 0" 1" 0.5" 2"</h3>
