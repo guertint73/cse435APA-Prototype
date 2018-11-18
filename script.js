@@ -25,7 +25,7 @@ listenCancelButton = function(){
 
 playFeed = function(){
     if(parkingFlag == 0){
-        playPerpendicularFeed
+        playPerpendicularFeed()
     } else{
         playParallelFeed()
     }
@@ -34,15 +34,15 @@ playFeed = function(){
 playParallelFeed = function(){
     var video = document.getElementById('parkingVideo')
     if(video!=null){
-        video.src = "parallelVideo.mp4"
-        video.play()
+        video.src = "parallelVideo.mp4";
+        video.play();
     }
 }
 
 playPerpendicularFeed = function(){
     var video = document.getElementById('parkingVideo')
     if(video!=null){
-        video.src = "perpendicularVideo.mp4"
-        video.play()
+        video.src = "perpendicularVideo.mp4";
+        video.play();
     }
 }
