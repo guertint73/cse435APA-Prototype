@@ -21,10 +21,8 @@
         setTimeout(() => { clearInterval(timerId)}, 16500);
         var random = Math.random()
 
-        if(random < 1.0){
+        if(random < .30){
           let timerFailure = setInterval(() => failure(), 5000);
-        } else {
-          clearInterval(timerFailure)
         }
       });
 
