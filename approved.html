@@ -24,7 +24,18 @@
         if(random < .30){
           let timerFailure = setInterval(() => failure(), 5000);
         }
+        
+        let timerSensor = setInterval(() => populateSensorData(), 500);
+
       });
+
+      function populateSensorData(){
+        let left = (Math.random()*2.2).toPrecision(2);
+        let front = (Math.random()*2.4).toPrecision(2);
+        let rear = (Math.random()*0).toPrecision(2);
+        let right = (Math.random()*2.3).toPrecision(2);
+        $("#sensors").text("Sensor Position: " +  left.toString() + "' " + front.toString() + "' " + rear.toString() + "' " + right.toString() + "'");
+      }
 
       function completed(){
         //alert('Parking Procedure Completed')
@@ -57,7 +68,7 @@
           <p>placeholder for video</p>
       </video>
       <div>
-        <h3> Sensor Position: 0" 1" 0.5" 2"</h3>
+        <h3 id="sensors"></h3>
       </div>
 
       <a href="parkingHalted.html"><button id="cancelButton">Cancel Procedure</button></a>
