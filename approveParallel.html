@@ -17,17 +17,19 @@
   <script>
       $(document).ready(function() {
           new loadParallelImage();
+          new drawSteeringBrakeLine();
       });
   </script>
 </head>
 <body>
 
-<div class="driver-view">
+  <div class="container-fluid driver-view">
   <div class="controls">
+      <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
     <a><img src="wheel.jpg" alt="Steering Wheel" id="steeringWheel" height="300" width="300"></a>
     <a><img src="brake.jpg" alt="Brake" id="brake" height="300" width="300"></a>
   </div>
-  <div class="container-fluid">
+  <div class="container-fluid HMI">
     <h1>Active Park Assist: Prototype</h1>
     <img alt="parallel.jpg" id="parallelImage" height="400" width="600"> 
       <ul>

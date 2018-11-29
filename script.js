@@ -46,3 +46,12 @@ playPerpendicularFeed = function(){
         video.play();
     }
 }
+
+drawSteeringBrakeLine = function(){
+    var wheel = document.getElementById("steeringWheel");
+    var wheelcontext =wheel.getContext("2d")
+    wheel.beginPath();
+    wheel.moveTo(0,0);
+    wheel.lineTo(300,150);
+    wheel.stroke();
+}

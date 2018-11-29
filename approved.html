@@ -28,12 +28,13 @@
 </head>
 
 <body>
-  <div class="driver-view">
+  <div class="container-fluid driver-view">
+    
     <div class="controls">
       <a href="parkingHalted.html"><img src="wheel.jpg" alt="Steering Wheel" id="steeringWheel" height="300" width="300"></a>
       <a href="parkingHalted.html"><img src="brake.jpg" alt="Brake" id="brake" height="300" width="300"></a>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid HMI">
       <h1>Parking Procedure Started</h1>
       <div style="float:left; display:inline;">
           <h3 id="speed">Speed: 3 MPH</h3>
@@ -41,7 +42,7 @@
       <div style="float:right; display:inline;">
         <h3 id="gear">Current Gear: R</h3>
       </div>
-      <video id="parkingVideo" controls height="400" width="600" muted>
+      <video id="parkingVideo" controls height="300" width="600" muted>
         <source src="parallelVideo.mp4" type="video/mp4">
           <p>placeholder for video</p>
       </video>

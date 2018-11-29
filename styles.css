@@ -3,8 +3,8 @@ html, body, .container-fluid {
     color: white;
     align-content: center;
     text-align: center;
-    max-width: 900px;
-    max-height: 600px;
+    width: 900px;
+    height: 600px;
     margin: auto
   }
   
@@ -88,6 +88,12 @@ html, body, .container-fluid {
 
   .driver-view {
     display: inline-block;
+    background-image: url("carInterior.jpg")
+  }
+
+  .HMI{
+    max-width: 400px;
+    max-height: 550px;
   }
 
   .container-fluid {
