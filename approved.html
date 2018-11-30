@@ -14,8 +14,13 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
+      var left = 8
+      var right = 15
+      var front = 9
+      var rear = 15
       $(document).ready(function() {
         new playFeed();
+
         let timerId = setInterval(() => completed(), 16000);
         // after 5 seconds stop
         setTimeout(() => { clearInterval(timerId)}, 16500);
@@ -30,11 +35,10 @@
       });
 
       function populateSensorData(){
-        let left = (Math.random()*2.2).toPrecision(2);
-        let front = (Math.random()*2.4).toPrecision(2);
-        let rear = (Math.random()*0).toPrecision(2);
-        let right = (Math.random()*2.3).toPrecision(2);
-        $("#sensors").text("Sensor Position: " +  left.toString() + "' " + front.toString() + "' " + rear.toString() + "' " + right.toString() + "'");
+        left -= .22
+        right -= .36
+        front -= .24
+        $("#sensors").text("Left: " +  left.toPrecision(2).toString() + "' Front: " + front.toPrecision(2).toString() + "' Rear: " + rear.toPrecision(2).toString() + "' Right: " + right.toPrecision(2).toString() + "'");
       }
 
       function completed(){
@@ -68,6 +72,7 @@
           <p>placeholder for video</p>
       </video>
       <div>
+        <h3>Sensor Position</h3>
         <h3 id="sensors"></h3>
       </div>
 
