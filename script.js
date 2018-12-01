@@ -26,8 +26,10 @@ listenCancelButton = function(){
 playFeed = function(){
     if(parkingFlag == 0){
         playPerpendicularFeed()
+        return parkingFlag
     } else{
         playParallelFeed()
+        return parkingFlag
     }
 }
 
