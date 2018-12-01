@@ -1,5 +1,5 @@
 // 0 is perpendicular, 1 is parallel
-var parkingFlag = 0
+let parkingFlag = 0
 
 loadPerpendicularImage = function(){
     var image = document.getElementById('perpendicularImage');
@@ -20,16 +20,6 @@ loadParallelImage = function(){
 listenCancelButton = function(){
     var cancelButton = document.getElementById('cancelButton')
     if(cancelButton != null){    
-    }
-}
-
-playFeed = function(){
-    if(parkingFlag == 0){
-        playPerpendicularFeed()
-        return parkingFlag
-    } else{
-        playParallelFeed()
-        return parkingFlag
     }
 }
 
