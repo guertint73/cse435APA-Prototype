@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Parking Commenced</title>
+
+  <!-- Stylesheets -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+      var left = 8
+      var right = 15
+      var front = 9
+      var rear = 15
+      $(document).ready(function() {
+        new playPerpendicularFeed();
+
+        let timerId = setInterval(() => completed(), 16000);
+        // after 5 seconds stop
+        setTimeout(() => { clearInterval(timerId)}, 16500);
+        var random = Math.random()
+
+        if(random < .30){
+          let timerFailure = setInterval(() => failure(), 5000);
+        }
+        
+        let timerSensor = setInterval(() => populateSensorData(), 500);
+
+      });
+
+      function populateSensorData(){
+          left -= .22
+          right -= .36
+          front -= .24
+        
+        $("#sensors").text("Left: " +  left.toPrecision(2).toString() + "' Front: " + front.toPrecision(2).toString() + "' Rear: " + rear.toPrecision(2).toString() + "' Right: " + right.toPrecision(2).toString() + "'");
+      }
+
+      function completed(){
+        //alert('Parking Procedure Completed')
+        window.location.href ='completed.html';
+      }
+
+      function failure(){
+        window.location.href = ('failure.html')
+      }
+    </script>
+</head>
+
+<body>
+  <div class="container-fluid driver-view">
+    
+    <div class="controls">
+      <a href="parkingHalted.html"><img src="wheel.jpg" alt="Steering Wheel" id="steeringWheel" height="300" width="300"></a>
+      <a href="parkingHalted.html"><img src="brake.jpg" alt="Brake" id="brake" height="300" width="300"></a>
+    </div>
+    <div class="container-fluid HMI">
+      <h1>Parking Procedure Started</h1>
+      <div style="float:left; display:inline;">
+          <h3 id="speed">Speed: 3 MPH</h3>
+      </div>
+      <div style="float:right; display:inline;">
+        <h3 id="gear">Current Gear: R</h3>
+      </div>
+      <video id="parkingVideo" controls height="300" width="600" muted>
+        <source src="parallelVideo.mp4" type="video/mp4">
+          <p>placeholder for video</p>
+      </video>
+      <div>
+        <h3>Sensor Position</h3>
+        <h3 id="sensors"></h3>
+      </div>
+
+      <a href="parkingHalted.html"><button id="cancelButton">Cancel Procedure</button></a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
