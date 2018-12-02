@@ -32,6 +32,8 @@
         }
         
         let timerSensor = setInterval(() => populateSensorData(), 500);
+        let timerSpeed = setInterval(() => speedCar(), 13000)
+        let timerPark = setInterval(() => parkCar(), 14750)
 
       });
 
@@ -42,6 +44,16 @@
         rear -= .33
         
         $("#sensors").text("Left: " +  left.toPrecision(2).toString() + "' Front: " + front.toPrecision(2).toString() + "' Rear: " + rear.toPrecision(2).toString() + "' Right: " + right.toPrecision(2).toString() + "'");
+      }
+
+      function speedCar(){
+        $("#speed").text("Speed: 2 MPH")
+        $("#gear").text("Current Gear: D")
+      }
+
+      function parkCar(){
+        $("#speed").text("Speed: 0 MPH")
+        $("#gear").text("Current Gear: P")
       }
 
       function completed(){
